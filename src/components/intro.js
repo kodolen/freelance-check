@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 
 class Intro extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
     render() {
         return (
-            <div>
-                
+            <div className="intro-wrapper">
+                <h2>{this.props.title}</h2>
+                <p className="intro-text">{this.props.text}</p>
             </div>
         )
     }

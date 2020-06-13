@@ -1,0 +1,61 @@
+.test-wrapper {
+
+    .sv_container {
+
+        border: 1px solid grey;
+        border-radius: 10px;
+
+        .sv_body {
+
+            border: none;
+            font-family: 'Roboto Condensed', sans-serif;
+            border-radius: 10px;
+
+            span {
+
+                font-family: 'Roboto Condensed', sans-serif;
+                color: #FF9900;
+
+            }
+
+            .sv_q_title {
+
+                span {
+
+                    font-size: 1.6rem;
+
+                }
+
+            }
+
+            .sv_next_btn,
+            .sv_prev_btn,
+            .sv_complete_btn {
+
+                background-color: #FF9900;
+                text-transform: uppercase;
+
+            }
+
+            .sv_qcbc {
+
+                span {
+
+                    color: black;
+
+                }
+
+
+            }
+
+            .sv_progress_bar {
+
+                background-color: #FF9900;
+
+            }
+
+        }
+
+    }
+
+}

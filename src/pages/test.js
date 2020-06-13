@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Layout from "../components/layout"
+import Intro from "../components/intro";
 import "survey-react/survey.css"
 import * as Survey from "survey-react"
 
@@ -25,13 +26,13 @@ class Test extends Component {
 
         for (var i = 0; i < answers.length; i++) {
             console.log(answers[i]['data'][0]['value']);
-            if(answers[i]['data'][0]['value'].includes("1")) {
+            if (answers[i]['data'][0]['value'].includes("1")) {
                 answer1.push(answers[i]['data'][0]['value'])
             }
-            if(answers[i]['data'][0]['value'].includes("2")) {
+            if (answers[i]['data'][0]['value'].includes("2")) {
                 answer2.push(answers[i]['data'][0]['value'])
             }
-            if(answers[i]['data'][0]['value'].includes("3")) {
+            if (answers[i]['data'][0]['value'].includes("3")) {
                 answer3.push(answers[i]['data'][0]['value'])
             }
         }
@@ -40,14 +41,14 @@ class Test extends Component {
         console.log(answer2);
         console.log(answer3);
 
-        score = (((answer1.length * 10) + (answer2.length * 1) + (answer3.length * 5)) / answers.length).toFixed(0);
+        score = (((answer1.length * 10) + (answer2.length * 1) + (answer3.length * 5)) / answers.length) * 10;
+        score = score.toFixed(0)
         console.log(score);
 
         this.setState({
             isCompleted: true,
             points: score
         })
-
 
     }
 
@@ -62,23 +63,28 @@ class Test extends Component {
                 json={json}
                 showCompletedPage={false}
                 onComplete={this.onCompleteComponent}
+                showProgressBar='top'
 
             />
         ) : null
 
         var onSurveyCompletion = this.state.isCompleted ? (
-            
+
             <div>
-                <div id="score">{this.state.points}</div>
+                <div id="score">{this.state.points}%</div>
             </div>
 
         ) : null
         return (
             <Layout>
-                <h1>Test2</h1>
-                {surveyRender}
-                {onSurveyCompletion}
-                <div id="surveyResult"></div>
+                <Intro title="Test" text="ple" />
+                <div className="inner">
+                    <div className="test-wrapper">
+                        {surveyRender}
+                    </div>
+                    {onSurveyCompletion}
+                    <div id="surveyResult"></div>
+                </div>
             </Layout>
         )
     }

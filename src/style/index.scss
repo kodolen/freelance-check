@@ -1,2 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+body {
+
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.inner {
+
+    padding: 0 15%;
+
+}
+
 @import 'component/header.scss';
 @import 'container/home.scss';
+@import 'container/test.scss';
+@import 'component/intro.scss';
