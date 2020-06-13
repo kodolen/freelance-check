@@ -9,8 +9,10 @@ class Intro extends Component {
     render() {
         return (
             <div className="intro-wrapper">
-                <h2>{this.props.title}</h2>
-                <p className="intro-text">{this.props.text}</p>
+                <div className="inner">
+                    <h2>{this.props.title}</h2>
+                    <p className="intro-text">{this.props.text}</p>
+                </div>
             </div>
         )
     }

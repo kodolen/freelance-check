@@ -1,46 +1,133 @@
-header {
-
-    padding: 2rem 5%;
-    width: 100%;
-    position: fixed;
+.header-wrapper {
 
     .logo-wrapper {
 
-        width: 300px;
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
 
-        img {
+    }
 
-            width: 80%;
+    .hamburger {
+
+        width: 4rem;
+        height: 4rem;
+        top: 0;
+        right: 2rem;
+        background-color: white;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+
+        span {
+
+            display: block;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background: #FF9900;
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                        opacity 0.55s ease;
+
+        }
+
+        &.white {
+
+            background-color: #FF9900;
+
+            span {
+
+                background: white;
+
+            }
 
         }
 
     }
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    header {
 
-    ul {
+        padding: 2rem 5%;
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        visibility: hidden;
+        opacity: 0;
 
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+        &.open {
 
-        li {
+            visibility: visible;
+            opacity: 1;
+            width: 100%;
+            height: 100%;
 
-            display: inline;
-            padding-left: 7rem;
-
-            a {
-
-                text-decoration: none;
-                color: orange;
-
+        }
+    
+        .logo-wrapper {
+    
+            width: 300px;
+    
+            img {
+    
+                width: 80%;
+    
             }
+    
+        }
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        ul {
+    
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+    
+            li {
+    
+                text-align: center;
+                padding: 1rem 0;
+    
+                a {
+    
+                    text-decoration: none;
+                    color: black;
+                    font-size: 3rem;
+                    font-weight: 700;
 
-          }
+                    &:hover {
+
+                        color: #FF9900;
+
+                    }
+    
+                }
+    
+              }
+    
+        }
+    
+    }
+
+    .active {
+
+        color: #FF9900;
 
     }
 
 }
+

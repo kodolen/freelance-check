@@ -7,14 +7,20 @@ import man from "../images/man-bb.png"
 
 
 const IndexPage = () => (
-  <Layout>
-    <div className="home-container">
-      <div className="intro">
-        <h2>Do you have it in you to become a freelancer?</h2>
-        <p>Being a freelancer sounds maybe more beautiful then it is.</p>
-      </div>
-      <div className="intro-img">
-        <img src={man}></img>
+  <Layout colorFinal="white">
+    <div className="inner">
+      <div className="home-container">
+        <div className="intro">
+          <h1>Do you have it in you to become a <span className="bold">freelancer?</span></h1>
+          <p className="flat-text">Being a freelancer sounds maybe more beautiful then it is. Being a freelancer sounds maybe more beautiful then it is. Being a freelancer sounds maybe more beautiful then it is.</p>
+          <div className="link-wrapper">
+            <a href="/test"><span className="button primary">DOE DE TEST</span></a>
+            <a href="/test"><span className="button secondary">STAPPENPLAN</span></a>
+          </div>
+        </div>
+        <div className="intro-img">
+          <img src={man}></img>
+        </div>
       </div>
     </div>
   </Layout>
