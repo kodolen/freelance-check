@@ -102,7 +102,7 @@ class Test extends Component {
 
         if (score > 50 && score < 77) {
             this.setState({
-                advice: "You did score good on the test, but there are still some things you have to take care of. You have to know to take care of your own administration and know how to find new clients and you definitely can start out as a freelancer!"
+                advice: "You did score good on the test, but there are still some things you have to take care of."
             })
 
             console.log("redelijk")
