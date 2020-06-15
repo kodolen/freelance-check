@@ -42,22 +42,22 @@ class Test extends Component {
                     switch (answers[i]['name']) {
 
                         case 'question1':
-                            basedAdvise.push("Think about what your core bussiness will be");
+                            basedAdvise.push("Think about what your core business will be");
                             break;
                         case 'question3':
-                            basedAdvise.push("Try to think about the benefits of being you own boss, there is no one breathing down your neck!");
+                            basedAdvise.push("Try to think about the benefits of being your own boss, there is no one breathing down your neck!");
                             break;
                         case 'question7':
                             basedAdvise.push("If you have struggles with not having someone to tell you what to do, try to see the client as your boss. The client will tell you what to do");
                             break;
                         case 'question8':
-                            basedAdvise.push("If you feel lonely quick, try to plan breaks at fixed times. Take a walk, (video) call with friends and family or eat something at a cafe");
+                            basedAdvise.push("If you feel lonely quickly, try to plan breaks at fixed times. Take a walk, (video) call with friends and family or eat something at a cafe");
                             break;
                         case 'question11':
-                            basedAdvise.push("There a lot of ways to find new clients. Be sure to have a up-to-date portfolio website and Linkedin and try to market it. Attend network drinks and events in your neighbourhood. Look for potential clients and approach them personally. Ask your own clients to mention you by their clients.");
+                            basedAdvise.push("There are a lot of ways to find new clients. Be sure to have an up-to-date portfolio website and Linkedin and try to market it. Attend network drinks and events in your neighbourhood. Look for potential clients and approach them personally. Ask your own clients to mention you by their clients.");
                             break;
                         case 'question12':
-                            basedAdvise.push("There is always a possibility that you have to handle with angry clients. Be sure you always make agreements, about certain things related to the project, with the client before you start on their project. If they want more or something totally different you can point them to the agreements.");
+                            basedAdvise.push("There is always a possibility that you have to handle angry clients. Be sure you always make agreements, about certain things related to the project, with the client before you start on their project. If they want more or something totally different you can point them to the agreements.");
                             break;
                         case 'question13':
                             basedAdvise.push("Every customer is different, one customer wants to contact in a formal way and the other customer in an informal way.");
@@ -66,7 +66,7 @@ class Test extends Component {
                             basedAdvise.push("Administration is really important, be sure you take care of it. If you don't start with a good administration then it can lead to a mess and even in paying fines");
                             break;
                         case 'question17':
-                            basedAdvise.push("Try to start your day you will normally do if you go to work or school. Maybe go out for a walk now and then and try to eat healthy. Try to have a good place at your own home and design it like a real office. Working from home doesn't mean you have to end up unwashed and in your tracksuit all day!");
+                            basedAdvise.push("Try to start your day you will normally do if you go to work or school. Maybe go out for a walk now and then and try to eat healthy. Try to have a good place at your own home and design it like a real office. Working from home doesn't mean you have to end up unwashed and in your pyjamas all day!");
                             break;
 
                     }
@@ -110,7 +110,7 @@ class Test extends Component {
 
         if (score > 78 && score < 101) {
             this.setState({
-                advice: "goed"
+                advice: "You scored really good on the test and beginning as a freelancer is definitely something for you!"
             })
 
             console.log("goed")
@@ -137,7 +137,7 @@ class Test extends Component {
         var onSurveyCompletion = this.state.isCompleted ? (
 
             <div className="result-wrapper">
-                <h2>Result</h2>
+                <h2>Result:</h2>
                 <div id="score">{this.state.points}<span className="perc">%</span></div>
                 <p className="flat-text">{this.state.advice}</p>
                 <ul>

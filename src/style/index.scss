@@ -27,3 +27,87 @@ body {
 @import 'container/test.scss';
 @import 'component/intro.scss';
 @import 'container/guide.scss';
+
+
+.about-wrapper {
+
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 0 6rem;
+
+    h2 {
+
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        font-family: 'Roboto Condensed', sans-serif;
+
+    }
+
+    p {
+
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        line-height: 1.6rem;
+
+    }
+
+    .intro-text {
+
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        line-height: 1.6rem;
+        font-style: italic;
+
+    }
+
+    .left {
+
+        width: 60%;
+        padding-right: 6rem;
+
+    }
+
+    .right {
+
+        width: 40%;
+        display: flex;
+        align-items: center;
+
+        img {
+
+
+        }
+
+    }
+
+    a {
+
+        text-decoration: none;
+
+    }
+
+    .button {
+
+        font-size: 14px;
+
+        padding: 10px 20px;
+        border-radius: 5px;
+
+        &.primary {
+
+            background-color: #FF9900;
+            color: white;
+
+        }
+
+        &.secondary {
+
+            color: black;
+
+        }
+
+    }
+
+}

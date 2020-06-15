@@ -65,7 +65,16 @@
     text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+    padding: 2rem 0 4rem;
+
+    h2 {
+
+        font-size: 24px;
+        font-weight: 100;
+
+    }
 
 
     #score {
@@ -106,6 +115,18 @@
         &.secondary {
 
             color: black;
+
+        }
+
+    }
+
+    ul {
+
+        width: 700px;
+
+        li {
+
+            text-align: left;
 
         }
 

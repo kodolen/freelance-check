@@ -2,7 +2,7 @@
 
     .number {
 
-        font-size: 2rem;
+        font-size: 1.4rem;
         color: #FF9900;
 
     }
@@ -10,8 +10,14 @@
     p {
 
         border-bottom: 1px solid #FF9900;
-        text-align: center;
-        margin-bottom: 4rem;
+        text-align: left;
+        margin-bottom: 3rem;
+        padding-bottom: 10px;
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        line-height: 1.6rem;
+        margin-top: 10px;
 
     }
 
