@@ -10,8 +10,10 @@ class Intro extends Component {
         return (
             <div className="intro-wrapper">
                 <div className="inner">
-                    <h2>{this.props.title}</h2>
-                    <p className="intro-text">{this.props.text}</p>
+                    <div className="intro-content">
+                        <h2>{this.props.title}</h2>
+                        <p className="flat-text">{this.props.text}</p>
+                    </div>
                 </div>
             </div>
         )

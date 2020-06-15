@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, {useState}from "react"
 import Logo from "../images/fc-logo.png"
+import LogoWhite from "../images/logo-fc.svg"
 
 
 const Header = ({ siteTitle, color }) => {
@@ -35,7 +36,7 @@ const Header = ({ siteTitle, color }) => {
         </div>
       </div>
       <div className="logo-wrapper">
-        <Link to="/"><img src={Logo}></img></Link>
+        {color === "white" ? <Link to="/"><img src={Logo}></img></Link> : <Link to="/"><img src={LogoWhite}></img></Link>}
       </div>
     </div>
 

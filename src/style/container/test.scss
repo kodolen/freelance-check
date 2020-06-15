@@ -59,3 +59,56 @@
     }
 
 }
+
+.result-wrapper {
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+    #score {
+
+        font-size: 6rem;
+        padding: 1rem 0 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .perc {
+
+            font-size: 3rem;
+            color: #FF9900;
+
+        }
+
+    }
+
+    a {
+
+        text-decoration: none;
+
+    }
+
+    .button {
+
+        padding: 12px 24px;
+        border-radius: 5px;
+
+        &.primary {
+
+            background-color: #FF9900;
+            color: white;
+
+        }
+
+        &.secondary {
+
+            color: black;
+
+        }
+
+    }
+
+}
