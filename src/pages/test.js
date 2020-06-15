@@ -9,9 +9,11 @@ class Test extends Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            listOfAdvice: []
         }
+
         this.onCompleteComponent = this.onCompleteComponent.bind(this)
+
     }
 
     onCompleteComponent = (survey) => {
@@ -19,6 +21,7 @@ class Test extends Component {
         let answer1 = [];
         let answer2 = [];
         let answer3 = [];
+        let basedAdvise = [];
         let score;
         let advice = "";
 
@@ -35,23 +38,50 @@ class Test extends Component {
                 }
                 if (answers[i]['data'][0]['value'].includes("3")) {
                     answer3.push(answers[i]['data'][0]['value'])
+
+                    switch (answers[i]['name']) {
+
+                        case 'question1':
+                            basedAdvise.push("Think about what your core bussiness will be");
+                            break;
+                        case 'question3':
+                            basedAdvise.push("Try to think about the benefits of being you own boss, there is no one breathing down your neck!");
+                            break;
+                        case 'question7':
+                            basedAdvise.push("If you have struggles with not having someone to tell you what to do, try to see the client as your boss. The client will tell you what to do");
+                            break;
+                        case 'question8':
+                            basedAdvise.push("If you feel lonely quick, try to plan breaks at fixed times. Take a walk, (video) call with friends and family or eat something at a cafe");
+                            break;
+                        case 'question11':
+                            basedAdvise.push("There a lot of ways to find new clients. Be sure to have a up-to-date portfolio website and Linkedin and try to market it. Attend network drinks and events in your neighbourhood. Look for potential clients and approach them personally. Ask your own clients to mention you by their clients.");
+                            break;
+                        case 'question12':
+                            basedAdvise.push("There is always a possibility that you have to handle with angry clients. Be sure you always make agreements, about certain things related to the project, with the client before you start on their project. If they want more or something totally different you can point them to the agreements.");
+                            break;
+                        case 'question13':
+                            basedAdvise.push("Every customer is different, one customer wants to contact in a formal way and the other customer in an informal way.");
+                            break;
+                        case 'question15':
+                            basedAdvise.push("Administration is really important, be sure you take care of it. If you don't start with a good administration then it can lead to a mess and even in paying fines");
+                            break;
+                        case 'question17':
+                            basedAdvise.push("Try to start your day you will normally do if you go to work or school. Maybe go out for a walk now and then and try to eat healthy. Try to have a good place at your own home and design it like a real office. Working from home doesn't mean you have to end up unwashed and in your tracksuit all day!");
+                            break;
+
+                    }
+
                 }
             }
         }
 
-        console.log(answersObj + "da");
-
-        console.log(answer1);
-        console.log(answer2);
-        console.log(answer3);
-
         score = (((answer1.length * 10) + (answer2.length * 5) + (answer3.length * 1)) / answers.length) * 10;
         score = score.toFixed(0)
-        console.log(score);
 
         this.setState({
             isCompleted: true,
-            points: score
+            points: score,
+            listOfAdvice: basedAdvise
         })
 
         if (score > 0 && score < 33) {
@@ -110,6 +140,11 @@ class Test extends Component {
                 <h2>Result</h2>
                 <div id="score">{this.state.points}<span className="perc">%</span></div>
                 <p className="flat-text">{this.state.advice}</p>
+                <ul>
+                    {this.state.listOfAdvice.map(item => (
+                        <li key={item}>{item}</li>
+                    ))}
+                </ul>
                 <a href="/test"><span className="button primary">Guide</span></a>
             </div>
 
