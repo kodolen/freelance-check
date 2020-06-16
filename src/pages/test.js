@@ -9,13 +9,38 @@ class Test extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            listOfAdvice: []
+            listOfAdvice: [],
         }
+
+
+        this.onCompleteComponent = this.onCompleteComponent.bind(this)
+
+
 
     }
 
+    
+
     componentDidMount(){
-        this.onCompleteComponent = this.onCompleteComponent.bind(this)
+
+        var json = {
+            surveyId: '98ccdae2-97aa-475e-b9f7-9a6cde833e54',
+            surveyPostId: "25a51c2b-2cd7-4ff7-9f3e-33336e275640"
+        };
+
+        let s =             <Survey.Survey
+
+        json={json}
+        showCompletedPage={false}
+        onComplete={this.onCompleteComponent}
+        showProgressBar='top'
+
+    />
+
+        this.setState({
+            survey: s
+        })
+        
     }
 
     onCompleteComponent = (survey) => {
@@ -121,19 +146,10 @@ class Test extends Component {
     }
 
     render() {
-        var json = {
-            surveyId: '98ccdae2-97aa-475e-b9f7-9a6cde833e54',
-            surveyPostId: "25a51c2b-2cd7-4ff7-9f3e-33336e275640"
-        };
         var surveyRender = !this.state.isCompleted ? (
-            <Survey.Survey
 
-                json={json}
-                showCompletedPage={false}
-                onComplete={this.onCompleteComponent}
-                showProgressBar='top'
+            this.state.survey
 
-            />
         ) : null
 
         var onSurveyCompletion = this.state.isCompleted ? (
