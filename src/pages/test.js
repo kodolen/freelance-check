@@ -11,8 +11,11 @@ class Test extends Component {
         this.state = {
             listOfAdvice: []
         }
+        if(typeof XMLHttpRequest !== "undefined") {
 
-        this.onCompleteComponent = this.onCompleteComponent.bind(this)
+            this.onCompleteComponent = this.onCompleteComponent.bind(this)
+
+        }
 
     }
 
