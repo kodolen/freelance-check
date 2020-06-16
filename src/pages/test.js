@@ -11,8 +11,6 @@ class Test extends Component {
         this.state = {
             listOfAdvice: []
         }
-
-        var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
         if(typeof XMLHttpRequest !== "undefined") {
 
             this.onCompleteComponent = this.onCompleteComponent.bind(this)
